@@ -1,0 +1,109 @@
+/* =========================================
+   Cores do Cabeçalho (Padrão IFFar)
+   ========================================= */
+
+.iffar-header {
+    background-color: #1c6126; /* Verde escuro */
+}
+
+/* =========================================
+   CÓDIGO DO BOTÃO ANIMADO (.cta)
+   ========================================= */
+
+.cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  
+  /* !important garante que o Bootstrap não vai sobrescrever o texto branco nem colocar sublinhado */
+  text-decoration: none !important;
+  color: white !important;
+  
+  font-size: 18px; 
+  background: #32a041; /* Verde mais claro */
+  
+  /* A transição agora aplica para tudo (all), permitindo que o botão estique suavemente */
+  transition: all 0.5s ease;
+  box-shadow: 6px 6px 0 black;
+  transform: skewX(-15deg);
+  border: none;
+  cursor: pointer;
+  
+  /* Largura inicial do botão */
+  width: 420px; 
+}
+
+.cta:focus {
+  outline: none;
+}
+
+.cta:hover {
+  box-shadow: 10px 10px 0 #c8191e; /* Sombra vermelha */
+  
+  /* AQUI ACONTECE O EFEITO DE ESTICAR: O botão cresce 30px no hover */
+  width: 450px; 
+}
+
+.cta .second {
+  transition: 0.5s;
+  width: 50px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  
+  /* Usamos o transform no lugar do margin para mover a setinha */
+  transform: translateX(0);
+}
+
+.cta:hover .second {
+  /* A setinha desliza um pouco mais para a direita quando o botão estica */
+  transform: translateX(15px); 
+}
+
+.span {
+  transform: skewX(15deg);
+  flex-grow: 1;
+  text-align: left;
+  
+  /* Mantém o texto em uma linha e coloca "..." se ficar muito grande */
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.one {
+  transition: 0.4s;
+  transform: translateX(-60%);
+}
+
+.two {
+  transition: 0.5s;
+  transform: translateX(-30%);
+}
+
+.cta:hover .three {
+  animation: color_anim 1s infinite 0.2s;
+}
+
+.cta:hover .one {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.6s;
+}
+
+.cta:hover .two {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.4s;
+}
+
+@keyframes color_anim {
+  0% {
+    fill: white;
+  }
+  50% {
+    fill: #c8191e; /* Setinha vermelha animada */
+  }
+  100% {
+    fill: white;
+  }
+}
