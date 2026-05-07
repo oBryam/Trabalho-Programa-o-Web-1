@@ -3,7 +3,7 @@
    ========================================= */
 
 .iffar-header {
-    background-color: #1c6126; /* Verde escuro */
+    background-color: #1c6126;
 }
 
 /* =========================================
@@ -16,14 +16,12 @@
   align-items: center;
   padding: 10px 20px;
   
-  /* !important garante que o Bootstrap não vai sobrescrever o texto branco nem colocar sublinhado */
   text-decoration: none !important;
   color: white !important;
   
   font-size: 18px; 
-  background: #32a041; /* Verde mais claro */
+  background: #32a041;
   
-  /* A transição agora aplica para tudo (all), permitindo que o botão estique suavemente */
   transition: all 0.5s ease;
   box-shadow: 6px 6px 0 black;
   transform: skewX(-15deg);
@@ -39,7 +37,7 @@
 }
 
 .cta:hover {
-  box-shadow: 10px 10px 0 #c8191e; /* Sombra vermelha */
+  box-shadow: 10px 10px 0 #c8191e;
   
   /* AQUI ACONTECE O EFEITO DE ESTICAR: O botão cresce 30px no hover */
   width: 450px; 
@@ -101,7 +99,7 @@
     fill: white;
   }
   50% {
-    fill: #c8191e; /* Setinha vermelha animada */
+    fill: #c8191e;
   }
   100% {
     fill: white;

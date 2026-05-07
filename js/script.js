@@ -4,7 +4,7 @@ const diasSemana = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 
 // Array com os meses para formatar a data
 const meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
 
-// Objeto contendo o seu horário baseado na imagem
+//Horarios
 const gradeDeAulas = {
     0: '<p class="text-success fw-bold text-center mt-3">Dia livre! Bom descanso.</p>', // Domingo
     1: `
@@ -63,7 +63,7 @@ const diaSemanaIndex = dataAtual.getDay(); // Retorna de 0 a 6
 const diaMes = dataAtual.getDate();
 const mesIndex = dataAtual.getMonth();
 
-// Monta o texto bonito (ex: "Quarta-feira, 6 de Maio")
+// Monta o texto
 const textoDataFormatada = `${diasSemana[diaSemanaIndex]}, ${diaMes} de ${meses[mesIndex]}`;
 
 // Injeta as informações no HTML
